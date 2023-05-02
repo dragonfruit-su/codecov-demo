@@ -48,6 +48,11 @@ def trigger_error():
     division_by_zero = 1 / 0
 
 
+@app.route("/error")
+def oops():
+    Calculator.explode(1, 0)
+
+
 def operation(method, num_factors):
     factors = []
     if num_factors == 2:
