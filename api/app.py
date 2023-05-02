@@ -50,7 +50,7 @@ def trigger_error():
 
 @app.route("/error")
 def oops():
-    Calculator.explode(1, 0)
+    Calculator.divide(1, 0)
 
 
 def operation(method, num_factors):

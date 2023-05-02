@@ -9,9 +9,4 @@ class Calculator:
         return x * y
 
     def divide(x, y):
-        if y == 0:
-            return "Why are you trying to devide by 0 ._."
         return x * 1.0 / y
-
-    def explode(x, y):
-        return x / y
