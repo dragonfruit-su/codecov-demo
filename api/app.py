@@ -1,3 +1,6 @@
+# python api/app.py
+# on another terminal: curl -d '{"x": 1, "y": 2}' -H 'Content-Type: application/json' http://localhost:8080/api/add
+
 from flask import (
     Flask,
     request,
@@ -18,6 +21,14 @@ sentry_sdk.init(
     # of transactions for performance monitoring.
     # We recommend adjusting this value in production.
     traces_sample_rate=1.0,
+    # To set a uniform sample rate
+    # Set profiles_sample_rate to 1.0 to profile 100%
+    # of sampled transactions.
+    # We recommend adjusting this value in production,
+    profiles_sample_rate=1.0,
+    # Alternatively, to control sampling dynamically
+    # profiles_sampler=profiles_sampler
+    debug=True,
 )
 
 app = Flask(__name__)
